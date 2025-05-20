@@ -89,7 +89,6 @@ dependencies {
     runtime(Libraries.jogampJoglLinuxI586)
     runtime(Libraries.jogampJoglWindowsAmd64)
     runtime(Libraries.jogampJoglWindowsI586)
-    runtime(project(":injected-client"))
     implementation(project(":runescape-api"))
 
     testAnnotationProcessor(Libraries.lombok)
