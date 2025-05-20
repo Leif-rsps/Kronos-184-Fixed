@@ -6,6 +6,10 @@
 
 ---
 
+**This has been updated on 20/05/2025, Commented out JDA/Discord integration and fixed Runelite, any changes I made you can see in commit history**
+
+---
+
 > Kronos was a semi-custom server that was hosted from May to September of 2020. We launched with 150 players online and maintained stability well.
 > Our goal was to have the features of a modern deob client such as gpu rendering while also having high quality custom content.
 > This package has been collecting dust on my github repository and I'd like to have it out to the community in hopes that it may inspire some users to move away from 317 servers and into deobs even if they want to do custom servers.
