@@ -41,7 +41,7 @@ class ClientConfigLoader
 		throw new RuntimeException();
 	}
 
-	private static final String CONFIG_URL = "https://raw.githubusercontent.com/rspsforge/kronos-maven/master/jav_config.ws";
+	private static final String CONFIG_URL = "https://raw.githubusercontent.com/Leif-rsps/Kronos-Resources/refs/heads/main/jav_config.ws";
 	private static final int MAX_ATTEMPTS = 16;
 
 	static Single<RSConfig> fetch()
