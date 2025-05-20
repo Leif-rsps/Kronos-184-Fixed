@@ -10,8 +10,8 @@ import io.ruin.model.entity.player.Player;
 import io.ruin.model.entity.player.PlayerGroup;
 import io.ruin.network.central.CentralClient;
 import io.ruin.services.discord.DiscordConnection;
-import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.entities.MessageEmbed;
+//import net.dv8tion.jda.api.EmbedBuilder;
+//import net.dv8tion.jda.api.entities.MessageEmbed;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -63,7 +63,7 @@ public class Punishment {
             p2.resetActions(true, true, true);
             Jail.startEvent(p2);
         });
-        logPunishment(p1, p2, -2, "jailed", new MessageEmbed.Field("Ores", String.valueOf(ores), true));
+//        logPunishment(p1, p2, -2, "jailed", new MessageEmbed.Field("Ores", String.valueOf(ores), true));
     }
 
     public static void jail(Player player, NPC npc, int ores) {
@@ -164,7 +164,8 @@ public class Punishment {
         logPunishment(staffMember, punishedUser, -1, "IP banned");
     }
 
-    private static void logPunishment(Player staff, Player victim, long time, String type, MessageEmbed.Field... fields) {
+    private static void logPunishment(Player staff, Player victim, long time, String type) {
+//    private static void logPunishment(Player staff, Player victim, long time, String type, MessageEmbed.Field... fields) {
         String until;
 
         if (time == -1 || time == -2) {
@@ -174,23 +175,23 @@ public class Punishment {
                     + " (in " + TimeUtils.fromMs(time - System.currentTimeMillis(), false) + ")";
         }
 
-        EmbedBuilder builder = new EmbedBuilder();
+//        EmbedBuilder builder = new EmbedBuilder();
+//
+//        builder.setTitle(String.format("%s has been %s by %s", victim.getName(), type, staff.getName()));
+//        builder.addField("Name", victim.getName(), true);
+//        builder.addField("Staff member", staff.getName(), true);
+//        builder.addField("Punishment", StringUtils.capitalizeFirst(type), true);
+//
+//        if (time != -2)
+//            builder.addField("Expires", until, true);
+//
+//        if (fields != null && fields.length > 0) {
+//            for (MessageEmbed.Field field : fields) {
+//                builder.addField(field);
+//            }
+//        }
 
-        builder.setTitle(String.format("%s has been %s by %s", victim.getName(), type, staff.getName()));
-        builder.addField("Name", victim.getName(), true);
-        builder.addField("Staff member", staff.getName(), true);
-        builder.addField("Punishment", StringUtils.capitalizeFirst(type), true);
-
-        if (time != -2)
-            builder.addField("Expires", until, true);
-
-        if (fields != null && fields.length > 0) {
-            for (MessageEmbed.Field field : fields) {
-                builder.addField(field);
-            }
-        }
-
-        DiscordConnection.post(DiscordConnection.CHANNEL_PUNISHMENTS, builder.build());
+//        DiscordConnection.post(DiscordConnection.CHANNEL_PUNISHMENTS, builder.build());
     }
 
 }
