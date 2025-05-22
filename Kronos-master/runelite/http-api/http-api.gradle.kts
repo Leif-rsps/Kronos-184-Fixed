@@ -56,10 +56,9 @@ tasks {
 
         inputs.properties(tokens)
 
-        from("src/main/resources") {
-            include("runelite.properties")
-
-            filter<ReplaceTokens>("tokens" to tokens)
+        filesMatching("runelite.properties") {
+            filter(ReplaceTokens::class, "tokens" to tokens)
+            filteringCharset = "UTF-8"
         }
     }
 }

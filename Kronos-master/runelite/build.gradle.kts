@@ -39,6 +39,8 @@ plugins {
     id(Plugins.versions.first) version Plugins.versions.second
     id(Plugins.latestVersion.first) version Plugins.latestVersion.second
 
+    `maven-publish`
+
     application
 }
 
@@ -52,8 +54,6 @@ fun isNonStable(version: String): Boolean {
 }
 
 allprojects {
-    apply<MavenPlugin>()
-
     group = "com.openosrs"
     version = ProjectVersions.rlVersion
 
@@ -72,7 +72,7 @@ subprojects {
 
         maven(url = "https://mvnrepository.com/artifact")
         maven(url = "https://repo1.maven.org/maven2")
-        maven(url = "http://repo.runelite.net")
+        maven(url = "https://repo.runelite.net")
         maven(url = "https://repo.maven.apache.org/maven2")
         maven(url = "https://raw.githubusercontent.com/open-osrs/hosting/master")
 

@@ -60,10 +60,9 @@ tasks {
 
         inputs.properties(tokens)
 
-        from("src/test/resources") {
-            include("cache.properties")
-
-            filter<ReplaceTokens>("tokens" to tokens)
+        filesMatching("cache.properties") {
+            filter(ReplaceTokens::class, "tokens" to tokens)
+            filteringCharset = "UTF-8"
         }
     }
 }

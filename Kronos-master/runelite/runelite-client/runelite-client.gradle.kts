@@ -80,15 +80,15 @@ dependencies {
         exclude(module = "xz")
     }
     implementation(Libraries.naturalMouse)
-    runtime(Libraries.trident)
-    runtime(Libraries.jogampGluegenLinuxAmd64)
-    runtime(Libraries.jogampGluegenLinuxI586)
-    runtime(Libraries.jogampGluegenWindowsAmd64)
-    runtime(Libraries.jogampGluegenWindowsI586)
-    runtime(Libraries.jogampJoglLinuxAmd64)
-    runtime(Libraries.jogampJoglLinuxI586)
-    runtime(Libraries.jogampJoglWindowsAmd64)
-    runtime(Libraries.jogampJoglWindowsI586)
+    runtimeOnly(Libraries.trident)
+    runtimeOnly(Libraries.jogampGluegenLinuxAmd64)
+    runtimeOnly(Libraries.jogampGluegenLinuxI586)
+    runtimeOnly(Libraries.jogampGluegenWindowsAmd64)
+    runtimeOnly(Libraries.jogampGluegenWindowsI586)
+    runtimeOnly(Libraries.jogampJoglLinuxAmd64)
+    runtimeOnly(Libraries.jogampJoglLinuxI586)
+    runtimeOnly(Libraries.jogampJoglWindowsAmd64)
+    runtimeOnly(Libraries.jogampJoglWindowsI586)
     implementation(project(":runescape-api"))
 
     testAnnotationProcessor(Libraries.lombok)
@@ -120,19 +120,18 @@ tasks {
 
     "processResources"(ProcessResources::class) {
         val tokens = mapOf(
-                "project.version" to ProjectVersions.rlVersion,
-                "rs.version" to ProjectVersions.rsversion.toString(),
-                "open.osrs.version" to ProjectVersions.openosrsVersion,
-                "open.osrs.builddate" to formatDate(Date()),
-                "launcher.version" to ProjectVersions.launcherVersion
+            "project.version" to ProjectVersions.rlVersion,
+            "rs.version" to ProjectVersions.rsversion.toString(),
+            "open.osrs.version" to ProjectVersions.openosrsVersion,
+            "open.osrs.builddate" to formatDate(Date()),
+            "launcher.version" to ProjectVersions.launcherVersion
         )
 
         inputs.properties(tokens)
 
-        from("src/main/resources") {
-            include("open.osrs.properties")
-
-            filter<ReplaceTokens>("tokens" to tokens)
+        filesMatching("**/*.properties") {
+            filter(ReplaceTokens::class, "tokens" to tokens)
+            filteringCharset = "UTF-8"
         }
     }
 
