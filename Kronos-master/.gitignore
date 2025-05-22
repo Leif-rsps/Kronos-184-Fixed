@@ -24,10 +24,6 @@ runelite/runelite-client/out/
 
 kronos-api/out/
 
-runelite/gradle/wrapper/gradle-wrapper.jar
-
-runelite/gradle/wrapper/gradle-wrapper.properties
-
 *.hprof
 
 runelite/runescape-client/out/
