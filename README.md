@@ -6,7 +6,8 @@
 
 ---
 
-**This has been updated on 20/05/2025, Commented out JDA/Discord integration and fixed Runelite, any changes I made you can see in commit history**
+**This has been updated on 20/05/2025, Commented out JDA/Discord integration and fixed Runelite, any changes I made you can see in commit history.
+Gradle has been updated to 7.6.4**
 
 ---
 
