@@ -94,7 +94,9 @@ object TournamentManager {
         val attributes = if (activeTournament == null) {
             TournamentPlaylist.VALUES.random().attributes
         } else {
-            TournamentPlaylist.VALUES.filter { it != activeTournament?.attributes }.random().attributes
+            TournamentPlaylist.VALUES.filter {
+                it.attributes != activeTournament?.attributes
+            }.random().attributes
         }
 
         val created = Tournament(attributes)

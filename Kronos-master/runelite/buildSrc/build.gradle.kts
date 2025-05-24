@@ -37,7 +37,3 @@ dependencies {
     implementation(gradleApi())
     implementation(localGroovy())
 }
-
-kotlinDslPluginOptions {
-    experimentalWarning.set(false)
-}

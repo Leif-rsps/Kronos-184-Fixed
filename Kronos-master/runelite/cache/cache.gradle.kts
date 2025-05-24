@@ -26,7 +26,7 @@
 import org.apache.tools.ant.filters.ReplaceTokens
 
 plugins {
-    id(Plugins.jarTest.first) version Plugins.jarTest.second
+//    id(Plugins.jarTest.first) version Plugins.jarTest.second
 }
 
 description = "Cache"

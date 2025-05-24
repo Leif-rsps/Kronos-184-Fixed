@@ -40,7 +40,7 @@ dependencies {
 tasks {
     register<JavaExec>("assembleMojo") {
         classpath = project.sourceSets.main.get().runtimeClasspath
-        main = "net.runelite.script.AssembleMojo"
+        mainClass.set("net.runelite.script.AssembleMojo")
         args(listOf(
                 "${project.extra["rootPath"]}/runelite-client/src/main/scripts",
                 "${project.extra["rootPath"]}/runelite-client/src/main/resources/runelite"
@@ -51,7 +51,7 @@ tasks {
         dependsOn("assembleMojo")
 
         classpath = project.sourceSets.main.get().runtimeClasspath
-        main = "net.runelite.script.IndexMojo"
+        mainClass.set("net.runelite.script.IndexMojo")
         args(listOf(
                 "${project.extra["rootPath"]}/runelite-client/src/main/resources/runelite",
                 "${project.extra["rootPath"]}/runelite-client/src/main/resources/runelite/index"

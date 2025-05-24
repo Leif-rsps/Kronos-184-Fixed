@@ -47,12 +47,6 @@ plugins {
 val localGitCommit = "3.2"
 val localGitCommitShort = "3.2"
 
-fun isNonStable(version: String): Boolean {
-    return listOf("ALPHA", "BETA", "RC").any {
-        version.toUpperCase().contains(it)
-    }
-}
-
 allprojects {
     group = "com.openosrs"
     version = ProjectVersions.rlVersion
@@ -94,7 +88,7 @@ subprojects {
 }
 
 application {
-    mainClassName = "net.runelite.client.RuneLite"
+    mainClass.set("net.runelite.client.RuneLite")
 }
 
 tasks {
