@@ -6,8 +6,11 @@
 
 ---
 
-**This has been updated on 20/05/2025, Commented out JDA/Discord integration and fixed Runelite, any changes I made you can see in commit history.
-Gradle has been updated to 7.6.4**
+**This has been updated on 20/05/2025, any changes I made you can see in commit history.**
+
+---
+
+**Gradle has been updated to 8.14, Kotlin Updated to 2.1.21 and JDA to 5.5.1**
 
 ---
 
