@@ -12,7 +12,7 @@ buildscript {
 
 plugins {
     id 'application'
-    id 'org.jetbrains.kotlin.jvm' version '1.7.10' apply false
+    id 'org.jetbrains.kotlin.jvm' version '2.1.21' apply false
     id 'io.franzbecker.gradle-lombok' version '3.3.0' apply false
 }
 
@@ -56,8 +56,8 @@ subprojects {
 
     dependencies {
 
-        implementation group: 'org.slf4j', name: 'slf4j-api', version:'1.7.25'
-        implementation group: 'org.slf4j', name: 'slf4j-simple', version:'1.7.25'
+        implementation group: 'org.slf4j', name: 'slf4j-api', version:'2.0.17'
+        implementation group: 'org.slf4j', name: 'slf4j-simple', version:'2.0.17'
         implementation group: 'com.google.guava', name: 'guava', version:'28.1-jre'
         implementation group: 'com.google.code.gson', name: 'gson', version:'2.8.2'
         implementation group: 'io.netty', name: 'netty-all', version:'4.1.17.Final'

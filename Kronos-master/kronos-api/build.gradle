@@ -26,9 +26,9 @@ dependencies {
     implementation group: 'org.apache.httpcomponents', name: 'httpclient', version:'4.5.4'
     api group: 'com.google.http-client', name: 'google-http-client-jackson2', version:'1.32.1'
     api group: 'org.db4j', name: 'kilim', version: '2.0.2'
-    api group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.8.1'
+    api group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.12.0'
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
 
 //    compile ('org.springframework.boot:spring-boot-starter-web:2.2.2.RELEASE') {
 //        exclude module: "spring-boot-starter-logging"
