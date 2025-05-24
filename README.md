@@ -10,7 +10,7 @@
 
 ---
 
-**Gradle has been updated to 8.14, Kotlin Updated to 2.1.21 and JDA to 5.5.1**
+**Gradle has been updated to 8.14, Kotlin Updated to 2.1.21 and JDA to 5.5.1 and Runelite has been fixed**
 
 ---
 
